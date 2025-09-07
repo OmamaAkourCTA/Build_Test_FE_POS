@@ -1226,17 +1226,17 @@ class SidenavComponent {
   redirectUserAccordingToEnv() {
     let host = window.location.host;
     //STAGING
-    if (host.indexOf('posstage.markaziatest.com') >= 0) {
-      window.location.href = 'http://portal.markaziatest.com';
+    if (host.indexOf('dxpos.markaziaapis.com') >= 0) {
+      window.location.href = 'https://portal.markaziahub.com';
     }
     //TEST
-    else if (host.indexOf('pos-markaziatest.azurewebsites.net') >= 0) {
-      window.location.href = 'https://dx-portalstest.azurewebsites.net';
+    else if (host.indexOf('dxtestpos.markaziaapis.com') >= 0) {
+      window.location.href = 'https://dxtestportal.markaziahub.com';
     }
     //LOCAL
     else if (host.indexOf('localhost:4200') >= 0) {
       // I AM USING PORTAL ON PORT 4201 SO THAT'S' WHY I REDIRECTED HERE
-      window.location.href = 'http://localhost:4201';
+      window.location.href = 'https://dxdevportal.markaziahub.com';
     }
   }
   logout() {
@@ -1619,7 +1619,7 @@ class SignalRService {
     this.sharedService = sharedService;
   }
   startConnection() {
-    this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__.HubConnectionBuilder().withUrl(`http://posstagebe.markaziatest.com/ChatHub?userId=${this.sharedService.getUserId}`).withAutomaticReconnect().build();
+    this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__.HubConnectionBuilder().withUrl(`http://dxtestpos.markaziaapis.com/ChatHub?userId=${this.sharedService.getUserId}`).withAutomaticReconnect().build();
     this.hubConnection.start().then(() => {
       console.log('Connection started');
     }).catch(err => {

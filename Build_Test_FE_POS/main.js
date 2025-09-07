@@ -697,17 +697,17 @@ class AuthGuard {
     if (!token || token === 'undefined') {
       let host = window.location.host;
       //STAGING
-      if (host.indexOf('pos-markaziastage.azurewebsites.net') >= 0) {
-        window.location.href = 'https://dx-portalsstage.azurewebsites.net';
+      if (host.indexOf('dxpos.markaziaapis.com') >= 0) {
+        window.location.href = 'https://portal.markaziahub.com';
       }
       //TEST
-      else if (host.indexOf('pos-markaziatest.azurewebsites.net') >= 0) {
-        window.location.href = 'https://dx-portalstest.azurewebsites.net';
+      else if (host.indexOf('dxtestpos.markaziaapis.com') >= 0) {
+        window.location.href = 'https://dxtestportal.markaziahub.com';
       }
       //LOCAL
       else if (host.indexOf('localhost:4200') >= 0) {
         // I AM USING PORTAL ON PORT 4201 SO THAT'S' WHY I REDIRECTED HERE
-        window.location.href = 'http://localhost:4201';
+        window.location.href = 'https://dxdevportal.markaziahub.com';
       }
       return false;
     } else {
@@ -4325,7 +4325,7 @@ const environment = {
   // masterBaseUrl: 'http://masterstagebe.markaziatest.com/api/', //staging
   // cmBaseUrl: 'http://cmstagebe.markaziatest.com/api/', //staging
   apiUrl: 'https://dxpos.markaziaapis.com/api/',
-  apiUrl2: 'https://dxmasterold.markaziaapis.com/api/',
+  apiUrl2: 'https://dxadminfinance.markaziaapis.com/api/',
   masterBaseUrl: 'https://dxmaster.markaziaapis.com/api/',
   cmBaseUrl: 'https://dxpns.markaziaapis.com/api/' //staging
   //apiUrl: 'https://posbe.markaziasystem.com/api/',  //live
