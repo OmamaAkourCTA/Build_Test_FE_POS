@@ -4319,15 +4319,16 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 const environment = {
-  production: false,
+  production: true,
   // apiUrl: 'http://posstagebe.markaziatest.com/api/',//staging
   // apiUrl2: 'http://adminstagebe.markaziatest.com/api/', //staging
   // masterBaseUrl: 'http://masterstagebe.markaziatest.com/api/', //staging
   // cmBaseUrl: 'http://cmstagebe.markaziatest.com/api/', //staging
-  apiUrl: 'https://dxpos.markaziaapis.com/api/',
-  apiUrl2: 'https://dxadminfinance.markaziaapis.com/api/',
-  masterBaseUrl: 'https://dxmaster.markaziaapis.com/api/',
-  cmBaseUrl: 'https://dxpns.markaziaapis.com/api/' //staging
+  apiUrl: 'https://dxdevpos.markaziaapis.com/api/',
+  apiUrl2: 'https://dxdevmasterold.markaziaapis.com/api/',
+  masterBaseUrl: 'https://dxdevmaster.markaziaapis.com/api/',
+  cmBaseUrl: 'https://dxdevpns.markaziaapis.com/api/' //staging
+  //apiUrl: 'https://posbe.markaziasystem.com/api/',  //live
   //apiUrl: 'https://posbe.markaziasystem.com/api/',  //live
   //apiUrl2: 'https://adminbe.markaziasystem.com/api/', //live
   //masterBaseUrl: 'https://markaziamasterbe.markaziasystem.com/api/',//live
