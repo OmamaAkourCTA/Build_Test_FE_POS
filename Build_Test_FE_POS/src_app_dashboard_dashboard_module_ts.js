@@ -1234,7 +1234,7 @@ class SidenavComponent {
       window.location.href = 'https://dxtestportal.markaziahub.com';
     }
     //LOCAL
-    else if (host.indexOf('localhost:4200') >= 0) {
+    else if (host.indexOf('dxdevpos.markaziaapis.com') >= 0) {
       // I AM USING PORTAL ON PORT 4201 SO THAT'S' WHY I REDIRECTED HERE
       window.location.href = 'https://dxdevportal.markaziahub.com';
     }
@@ -1608,10 +1608,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SignalRService": () => (/* binding */ SignalRService)
 /* harmony export */ });
-/* harmony import */ var _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/signalr */ 77930);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared.service */ 69082);
+/* harmony import */ var _microsoft_signalr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/signalr */ 77930);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../environments/environment */ 92340);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared.service */ 69082);
 
+ // 👈 generic import
 
 
 class SignalRService {
@@ -1619,7 +1621,7 @@ class SignalRService {
     this.sharedService = sharedService;
   }
   startConnection() {
-    this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__.HubConnectionBuilder().withUrl(`http://dxtestpos.markaziaapis.com/ChatHub?userId=${this.sharedService.getUserId}`).withAutomaticReconnect().build();
+    this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_2__.HubConnectionBuilder().withUrl(`${_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.ChathubUrl}?userId=${this.sharedService.getUserId}`).withAutomaticReconnect().build();
     this.hubConnection.start().then(() => {
       console.log('Connection started');
     }).catch(err => {
@@ -1642,9 +1644,9 @@ class SignalRService {
   }
 }
 SignalRService.ɵfac = function SignalRService_Factory(t) {
-  return new (t || SignalRService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_shared_service__WEBPACK_IMPORTED_MODULE_0__.SharedService));
+  return new (t || SignalRService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_shared_service__WEBPACK_IMPORTED_MODULE_1__.SharedService));
 };
-SignalRService.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
+SignalRService.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
   token: SignalRService,
   factory: SignalRService.ɵfac,
   providedIn: 'root'

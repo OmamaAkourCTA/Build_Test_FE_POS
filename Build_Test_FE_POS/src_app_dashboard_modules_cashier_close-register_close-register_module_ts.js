@@ -3805,7 +3805,7 @@ class ModalCloseComponent {
       window.location.href = 'https://dxtestportal.markaziahub.com';
     }
     //LOCAL
-    else if (host.indexOf('localhost:4200') >= 0) {
+    else if (host.indexOf('dxdevpos.markaziaapis.com') >= 0) {
       // I AM USING PORTAL ON PORT 4201 SO THAT'S' WHY I REDIRECTED HERE
       window.location.href = 'https://dxdevportal.markaziahub.com';
     }

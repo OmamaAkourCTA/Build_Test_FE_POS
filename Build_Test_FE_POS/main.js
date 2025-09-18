@@ -705,7 +705,7 @@ class AuthGuard {
         window.location.href = 'https://dxtestportal.markaziahub.com';
       }
       //LOCAL
-      else if (host.indexOf('localhost:4200') >= 0) {
+      else if (host.indexOf('dxdevpos.markaziaapis.com') >= 0) {
         // I AM USING PORTAL ON PORT 4201 SO THAT'S' WHY I REDIRECTED HERE
         window.location.href = 'https://dxdevportal.markaziahub.com';
       }
@@ -4324,6 +4324,7 @@ const environment = {
   // apiUrl2: 'http://adminstagebe.markaziatest.com/api/', //staging
   // masterBaseUrl: 'http://masterstagebe.markaziatest.com/api/', //staging
   // cmBaseUrl: 'http://cmstagebe.markaziatest.com/api/', //staging
+  ChathubUrl: 'https://dxdevpos.markaziaapis.com/ChatHub',
   apiUrl: 'https://dxdevpos.markaziaapis.com/api/',
   apiUrl2: 'https://dxdevmasterold.markaziaapis.com/api/',
   masterBaseUrl: 'https://dxdevmaster.markaziaapis.com/api/',
